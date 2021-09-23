@@ -1,0 +1,20 @@
+stages:
+    - deploy
+    
+deploy:
+    stage: deploy
+    script:
+    - >
+      curl
+      --silent
+      --location
+      --output /dev/null
+      --write-out "%{http_code} %{url_effective}\n"
+      --request POST
+      --form token=f47b8061b4f4de57c3d0515009afc7
+      --form ref=master
+      --form "variables[CI_PROJECT_NAMESPACE]=$CI_PROJECT_NAMESPACE"
+      --form "variables[CI_PROJECT_NAME]=$CI_PROJECT_NAME"
+      --form "variables[CI_COMMIT_REF_NAME]=$CI_COMMIT_REF_NAME"
+      --form "variables[CI_COMMIT_TAG]=$CI_COMMIT_TAG"
+      https://ncfcode.rc.fas.harvard.edu/api/v4/projects/134/trigger/pipeline

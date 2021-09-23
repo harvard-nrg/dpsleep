@@ -1,0 +1,25 @@
+help(
+[[
+This module loads the act pipeline
+]])
+local version = "{{ ref_name }}"
+local base = pathJoin("{{ deploy_root }}", "act", version)
+deps = {
+    {
+        package="miniconda3",
+        lmodule="miniconda3/4.3.30-ncf"
+    },
+    {
+        package="matlab",
+        lmodule="matlab/R2017a-fasrc01"
+    }
+}
+for i,dep in ipairs(deps) do
+    package,lmodule = dep["package"],dep["lmodule"]
+    if isloaded(package) and not isloaded(lmodule) then
+        prereq(lmodule)
+    else
+        load(lmodule)
+    end
+end
+prepend_path("PATH", base)
