@@ -54,15 +54,6 @@ YYYY-MM-DD hh:mm:ss:mmm|accel_x(g)|accel_y(g)|accel_z(g)|light(lux)|button(0-1)|
 
 - After this step run dpsleep-freq step
 
-## Installation
-
-To install `dpsleep-extract` on your system
-
-```bash
-git clone git@github.com:harvard-nrg/dpsleep-extract.git 
-cd extract
-pip install -r requirements.txt
-```
 
 ## Usage
 
