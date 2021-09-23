@@ -90,7 +90,7 @@ For more information, please run
 geneactiv_extract.py -h
 ```
 
-#DPSleep-freq: Step 2 frequency analysis
+# DPSleep-freq: Step 2 frequency analysis
 =========
 
 ## Table of contents
