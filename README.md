@@ -16,12 +16,12 @@ There are six DPSleep modules. They are run in tandem. Their dependencies are:
 
 * Finally, clone this repository:
 
-      git clone https://github.com/harvard-nrg/dpsleep.git
+      git clone https://github.com/dptools/dpsleep.git
     
   Individual module scripts are `dpsleep/dpsleep-*/*py`. Learn more about them below.
   
 
-# DPSleep-extract: Step #1 extract the raw data
+# DPSleep1-extract: Step #1 extract the raw data
 
 ## Table of contents
 
